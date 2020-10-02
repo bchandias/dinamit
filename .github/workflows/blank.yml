@@ -35,9 +35,6 @@ jobs:
         cd modyo-widgets-investments-accounts
         yarn build
     - name: Push to Modyo Site
-      run: | 
-        cd modyo-widgets-investments-accounts 
-        yarn modyo-push "$MODYO_WIDGET_NAME"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This gets generated automatically
         MODYO_ACCOUNT_URL: ${{secrets.BASE_URL}}
@@ -45,6 +42,9 @@ jobs:
         MODYO_TOKEN: ${{secrets.TOKEN}}
         MODYO_SITE_ID: ${{secrets.SITE_ID}}
         MODYO_WIDGET_NAME: ${{secrets.WIDGET_NAME}}
+      run: | 
+        cd modyo-widgets-investments-accounts 
+        yarn modyo-push "$MODYO_WIDGET_NAME"
     - name: Push to Spanish Modyo Site
       run: | 
         cd modyo-widgets-investments-accounts 
