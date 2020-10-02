@@ -1,6 +1,3 @@
 {
-  "hooks": {
-    "pre-commit": "validate-branch-name",
-    "post-checkout": "validate-branch-name"
-  }
+  "hooks": {}
 }
