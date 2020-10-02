@@ -1,6 +1,5 @@
 <template>
   <div class="accounts-app py-lg-5">
-    <div class="d-none" />
     <div
       v-if="isLoading"
       class="loading">
@@ -13,7 +12,8 @@
     <div
       v-else
       class="accounts__container container-lg p-0">
-      <div class="d-block d-lg-none p-lg-4 px-4 pt-4 pb-3">
+      <!-- <indicadores-chile /> -->
+      <!-- <div class="d-block d-lg-none p-lg-4 px-4 pt-4 pb-3">
         <multiselect
           v-model="activeAccount"
           :options="accounts"
@@ -26,8 +26,8 @@
           deselect-label=""
           selected-label=""
           :allow-empty="false" />
-      </div>
-      <ul class="accounts__nav nav d-none d-lg-flex">
+      </div> -->
+      <!-- <ul class="accounts__nav nav d-none d-lg-flex">
         <li
           v-for="account in accounts"
           :key="account.id"
@@ -38,7 +38,22 @@
             class="nav-link px-5 py-3"
             @click.prevent="setActiveAccount(account)">{{ account.name }}</a>
         </li>
-      </ul>
+        <li class="nav-item">
+          <a
+            href="#"
+            class="nav-link px-5 py-3 active">Ahorro</a>
+        </li>
+        <li class="nav-item">
+          <a
+            href="#"
+            class="nav-link px-5 py-3 disabled">Inversiones</a>
+        </li>
+        <li class="nav-item">
+          <a
+            href="#"
+            class="nav-link px-5 py-3 disabled">Portafolio</a>
+        </li>
+      </ul> -->
       <div>
         <div
           v-if="!showPanel"
@@ -48,17 +63,111 @@
             :class="!config && !statements ? false : 'd-none'">
             <summary-resume
               :account="activeAccount"
+              :indicators="indicators"
               @statements="openStatementsPanel()"
               @config="openConfigPanel()"
               @goto="goToSlide" />
+            <!-- <opciones /> -->
+            <!-- <test-commons /> -->
           </div>
           <div class="col-lg-8 accounts__investsments-summary">
-            <investments-summary
+            <div class="col-lg-12 accounts__investsments-summary">
+              <!-- <ul class="accounts__nav nav d-none d-lg-flex">
+                <li class="nav-item">
+                  <a
+                    href="#"
+                    class="nav-link px-5 py-3 active">Ahorro</a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    href="#"
+                    class="nav-link px-5 py-3 disabled">Inversiones</a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    href="#"
+                    class="nav-link px-5 py-3 disabled">Portafolio</a>
+                </li>
+              </ul> -->
+              <nav>
+                <div
+                  id="nav-tab"
+                  class="nav nav-tabs"
+                  role="tablist">
+                  <a
+                    id="nav-home-tab"
+                    class="nav-item nav-link active"
+                    data-toggle="tab"
+                    href="#nav-home"
+                    role="tab"
+                    aria-controls="nav-home"
+                    aria-selected="true">Comparador</a>
+                  <a
+                    id="nav-profile-tab"
+                    class="nav-item nav-link"
+                    data-toggle="tab"
+                    href="#nav-profile"
+                    role="tab"
+                    aria-controls="nav-profile"
+                    aria-selected="false">Inversión</a>
+                  <a
+                    id="nav-contact-tab"
+                    class="nav-item nav-link"
+                    data-toggle="tab"
+                    href="#nav-contact"
+                    role="tab"
+                    aria-controls="nav-contact"
+                    aria-selected="false">Brokers</a>
+                  <a
+                    id="nav-broker-tab"
+                    class="nav-item nav-link"
+                    data-toggle="tab"
+                    href="#nav-broker"
+                    role="tab"
+                    aria-controls="nav-broker"
+                    aria-selected="false">Brokers</a>
+                </div>
+              </nav>
+              <div
+                id="nav-tabContent"
+                class="tab-content">
+                <div
+                  id="nav-home"
+                  class="tab-pane fade show active"
+                  role="tabpanel"
+                  aria-labelledby="nav-home-tab">
+                  <formulario />
+                </div>
+                <div
+                  id="nav-profile"
+                  class="tab-pane fade"
+                  role="tabpanel"
+                  aria-labelledby="nav-profile-tab">
+                  <listado-gratis />
+                </div>
+                <div
+                  id="nav-contact"
+                  class="tab-pane fade"
+                  role="tabpanel"
+                  aria-labelledby="nav-contact-tab">
+                  <listado-pro />
+                </div>
+                <div
+                  id="nav-broker"
+                  class="tab-pane fade"
+                  role="tabpanel"
+                  aria-labelledby="nav-contact-tab">
+                  <listado-brokers />
+                </div>
+              </div>
+            </div>
+            <!-- <investments-summary
               v-if="!config && !statements"
               class="d-none d-lg-block"
               :account="activeAccount"
               :indicators="indicators"
-              @goto="goToSlide" />
+              @goto="goToSlide" /> -->
+            <!-- <formulario /> -->
             <transition name="slide">
               <settings-panel
                 v-if="config === true"
@@ -99,6 +208,10 @@ import InvestmentsSummary from './components/InvestmentsSummary.vue';
 import MovementsPanel from './components/MovementsPanel.vue';
 import StatementsPanel from './components/StatementsPanel.vue';
 import InvestmentModal from './components/InvestmentModal.vue';
+import Formulario from './components/Formulario.vue';
+import ListadoGratis from './components/ListadoGratis.vue';
+import ListadoPro from './components/ListadoPro.vue';
+import ListadoBrokers from './components/ListadoBrokers.vue';
 
 export default {
   name: 'Accounts',
@@ -110,6 +223,10 @@ export default {
     'investment-modal': InvestmentModal,
     'movements-panel': MovementsPanel,
     'statements-panel': StatementsPanel,
+    formulario: Formulario,
+    'listado-gratis': ListadoGratis,
+    'listado-pro': ListadoPro,
+    'listado-brokers': ListadoBrokers,
     Multiselect,
   },
   data() {

@@ -1299,10 +1299,10 @@
     tmp-promise "^3.0.2"
     tslib "^2.0.0"
 
-"@modyo/financial-commons@^2.1.26":
-  version "2.1.26"
-  resolved "https://registry.yarnpkg.com/@modyo/financial-commons/-/financial-commons-2.1.26.tgz#1a8427432469db991bb2a06460bf86497b4c9566"
-  integrity sha512-3b8XnvCGDwxgY9KxCQEMbzWt4VItn/EdQo2OC83cgbaovIXT3HH6I+F9NbNghFGn+eFxUMH15jtuA4HWax7qnQ==
+"@modyo/financial-commons@^2.1.28":
+  version "2.1.28"
+  resolved "https://registry.yarnpkg.com/@modyo/financial-commons/-/financial-commons-2.1.28.tgz#86f80e750d634c4ea30a38b0819bc0b4372a292f"
+  integrity sha512-AyTIOFfuUSMcV8WPWOFjgGoQaLkCjNtoPiLud37ljPjpuSnIaFJHPLQujl09etm/xU+Zk237YAVJSl7c7K7m6g==
   dependencies:
     "@fullhuman/postcss-purgecss" "^2.3.0"
     "@mathieustan/vue-datepicker" "0.2.6"

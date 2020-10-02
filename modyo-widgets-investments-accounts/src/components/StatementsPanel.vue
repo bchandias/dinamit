@@ -18,7 +18,7 @@
     <div class="my-4 mt-lg-0 mb-lg-1 h-100">
       <m-shadow-scroll class="h-100">
         <div class="mx-4 mx-lg-1 mb-0 mt-1">
-          <table class="table border-bottom mb-0">
+          <table class="table border-bottom mb-0 currency-table">
             <tbody class="border-left border-right">
               <tr
                 v-for="statement in statements"

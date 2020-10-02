@@ -21,7 +21,7 @@
     "@fortawesome/vue-fontawesome": "^2.0.0",
     "@fullhuman/postcss-purgecss": "^2.3.0",
     "@mathieustan/vue-datepicker": "0.2.3-rc.2",
-    "@modyo/financial-commons": "^2.1.26",
+    "@modyo/financial-commons": "^2.1.28",
     "axios": "^0.20.0",
     "bootstrap": "^4.5.2",
     "core-js": "^3.6.5",
