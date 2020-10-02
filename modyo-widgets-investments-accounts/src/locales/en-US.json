@@ -1,0 +1,121 @@
+{
+  "commons": {
+    "back": "Back"
+  },
+  "date": {
+    "format": {
+      "lang": "en",
+      "last-3-months": "Last 3 months",
+      "last-6-months": "Last 6 months",
+      "last-month": "Last month",
+      "long": "yyyy-MM-dd",
+      "short": "MMMM YYYY",
+      "this-month": "This month",
+      "range": "Date range"
+    }
+  },
+  "investment-details": {
+    "current-investment": "Current investment",
+    "distribution": "Distribution",
+    "distribution-total": "Total distribution",
+    "fees": "Fees",
+    "modal": {
+      "current-price": "Current price",
+      "current-valorization": "Current valuation",
+      "current-value": "Current value",
+      "date": "Investment date",
+      "fees": "Fees",
+      "initial-investment": "Initial invesment",
+      "market-value": "Market value",
+      "purchase-price": "Purchase price",
+      "purchase-value": "Purchase value",
+      "quantity": "Quantity",
+      "title": {
+        "buy-sell-historical": "Buy/Sell History",
+        "input-rescue-historical": "Deposit/Withdrawal History"
+      }
+    },
+    "rentability": "Profitability",
+    "stock": "Stock",
+    "summary": "Summary",
+    "title": "Investment Details",
+    "total-current-investment": "Total investment",
+    "utility-total-loss": "Gain/Loss"
+  },
+  "investment-item": {
+    "closing-price": "Closing price",
+    "detail": "Detail",
+    "distribution": "Distribution",
+    "fee-avg-value": "Average fee cost",
+    "fee-value": "Fee cost",
+    "purchase-avg-price": "Average purchase price",
+    "rentability": "Profitability",
+    "utility-total-loss": "Gain/Loss"
+  },
+  "investments-summary": {
+    "currency-detail": "Currency Details",
+    "empty-amount": "To start investing, please make a deposit to your money market account.",
+    "pay": "Deposit",
+    "title": "Investment Summary"
+  },
+  "movements": {
+    "amount": "Amount",
+    "cash-balance": "Cash balance",
+    "export-excel": "Export Excel",
+    "fee-value": "Fee Value",
+    "fees": "Fees",
+    "final": "Final",
+    "from-account": "Origin Account",
+    "initial": "Initial",
+    "word": "Movements",
+    "movement-types": "Movement Types",
+    "mutual-fund": "Mutual Fund",
+    "no-movements": "There are no movements during the selected period",
+    "payments": "Payments",
+    "period": "Period",
+    "period-resume": "Period Summary",
+    "purchases": "Purchases/Contributions",
+    "quantity": "Quantity",
+    "sales": "Sales/Withdrawals",
+    "select-other-period-sidebar": "Select another date range from the side bar",
+    "select-other-period": "Select another period",
+    "stock": "Stock",
+    "title": "Movement Details",
+    "to": "to",
+    "to-account": "Destination Account",
+    "total-amount": "Total Amount",
+    "transfers": "Transfers",
+    "types": {
+      "all": "All",
+      "cash-payment": "Cash payments",
+      "dividend": "Dividends",
+      "mutual-funds-contribution": "Mutual fund contributions",
+      "mutual-funds-rescue": "Mutual fund withdrawals",
+      "others": "Others",
+      "stock-purchase": "Stock purchases",
+      "stock-sell": "Stock sales"
+    },
+    "unit-price": "Unit price"
+  },
+  "settings-panel": {
+    "account-name-lbl": "Account name",
+    "email-notifications-title": "Email notifications",
+    "title": "Account Settings",
+    "update-btn": "Update"
+  },
+  "statements": {
+    "download": "Download",
+    "period": "Period",
+    "title": "Account Statements"
+  },
+  "summary-resume": {
+    "account-label": "Equity Account",
+    "config-account-btn": "Account settings",
+    "invest-btn": "Invest",
+    "investments-btn": "Investments",
+    "movements-btn": "Movements",
+    "pay-btn": "Pay",
+    "statements-btn": "Statements",
+    "title": "Summary"
+  }
+}
