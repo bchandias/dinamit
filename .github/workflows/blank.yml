@@ -15,6 +15,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
         registry-url: https://npm.pkg.github.com/
         scope: '@modyo'
+    - name: Open folder
+      run: cd modyo-widgets-investments-accounts
     - name: Install dependencies with yarn
       # if your project use more than one private registry you cad add it like this:
       # run: |
@@ -22,7 +24,6 @@ jobs:
       #   echo "//npm.fontawesome.com/:_authToken=$FORTAWESOME_TOKEN" >> .npmrc
       #   yarn
       # if not do this:
-      run: cd modyo-widgets-investments-accounts
       run: yarn
       env:
         # And add the additional registry token here:
