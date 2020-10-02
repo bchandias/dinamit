@@ -29,14 +29,14 @@ jobs:
         # And add the additional registry token here:
         # FORTAWESOME_TOKEN: ${{secrets.FORTAWESOME_TOKEN}}
         NODE_AUTH_TOKEN: ${{ secrets.TOKEN_REG }}
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This gets generated automatically
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Build Package
       run: | 
         cd modyo-widgets-investments-accounts
         yarn build
     - name: Push to Modyo Site
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This gets generated automatically
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         MODYO_ACCOUNT_URL: ${{secrets.BASE_URL}}
         MODYO_VERSION: ${{secrets.VERSION}}
         MODYO_TOKEN: ${{secrets.TOKEN}}
