@@ -22,6 +22,7 @@ jobs:
       #   echo "//npm.fontawesome.com/:_authToken=$FORTAWESOME_TOKEN" >> .npmrc
       #   yarn
       # if not do this:
+      run: cd modyo-widgets-investments-accounts
       run: yarn
       env:
         # And add the additional registry token here:
