@@ -1,87 +1,433 @@
+body{
+	color: #071A52 !important;
+	background-color: #f4f4f4  !important;
+}
+#header{
+	background-color: #fff;
+}
+/**BG Colors**/
+.bg-navy{
+	background-color: #071A52;
+}
+.bg-green{
+	background-color: #16B978;
+}
+.bg-lime{
+	background-color: #A8FF84;
+}
+.bg-gray{
+	background-color: #F7F5F6;
+}
+/**Font Colors**/
+.c-navy{
+	color: #071A52
+}
+.c-green{
+	color: #16B978
+}
+.c-lime{
+	color: #A8FF84
+}
+.c-gray{
+	color: #F7F5F6
+}
+.fs-12{
+	font-size: 0.750em;
+}
+/**buttons**/
+button.bg-green:hover{
+	background-color: #4ac292;
+	border-color: #4ac292;
+}
+/**Input**/
+.group {
+	position: relative;
+	margin-bottom: 45px;
+}
+input {
+	font-size: 18px;
+	padding: 10px 10px 10px 5px;
+	display: block;
+	width: 65%;
+	border: none;
+	border-bottom: 1px solid #16B978;
+	background: transparent;
+}
+input:focus {
+	outline: none;
+}
+
+/* LABEL ======================================= */
+label {
+	color: #071A52;
+	font-size: 16px;
+	font-weight: normal;
+	position: absolute;
+	pointer-events: none;
+	left: 5px;
+	top: 10px;
+	transition: 0.2s ease all;
+	-moz-transition: 0.2s ease all;
+	-webkit-transition: 0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label,
+input:valid ~ label {
+	top: -20px;
+	font-size: 0.875em;
+	color: #071A52;
+}
+
+/* BOTTOM BARS ================================= */
+.bar {
+	position: relative;
+	display: block;
+	width: 65%;
+}
+.bar:before,
+.bar:after {
+	content: "";
+	height: 2px;
+	width: 0;
+	bottom: 1px;
+	position: absolute;
+	background: #16B978;
+	transition: 0.2s ease all;
+	-moz-transition: 0.2s ease all;
+	-webkit-transition: 0.2s ease all;
+}
+.bar:before {
+	left: 50%;
+}
+.bar:after {
+	right: 50%;
+}
+
+/* active state */
+input:focus ~ .bar:before,
+input:focus ~ .bar:after {
+	width: 50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+	position: absolute;
+	height: 60%;
+	width: 100px;
+	top: 25%;
+	left: 0;
+	pointer-events: none;
+	opacity: 0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+	-webkit-animation: inputHighlighter 0.3s ease;
+	-moz-animation: inputHighlighter 0.3s ease;
+	animation: inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+	from {
+		background: transparent;
+	}
+	to {
+		width: 0;
+		background: transparent;
+	}
+}
+@-moz-keyframes inputHighlighter {
+	from {
+		background: #5264ae;
+	}
+	to {
+		width: 0;
+		background: transparent;
+	}
+}
+@keyframes inputHighlighter {
+	from {
+		background: transparent;
+	}
+	to {
+		width: 0;
+		background: transparent;
+	}
+}
+
+
+/***Free Cards***/
 .principal-title{
-    text-align: center;
-    color: #808080;
+	text-align: center;
+	color: #808080;
+}
+.principal-subtitle{
+	text-align: center;
+	color: #808080;
+	padding-bottom: 30px;
+}
+.bank-image {
+	height: 62px;
+	width: 100px;
+	margin: 0 auto;
+}
+
+.item {
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-bottom: 30px;
+}
+.item-card {
+	transition: 0.5s;
+	cursor: pointer;
+	min-height: 300px;
+	padding: 15px;
+	border-radius: .3em;
+}
+.item-card .btn-link{
+	margin: 0 auto;
+	width: 8em;
+	color: #F7F5F6
+}
+.item-card .btn-link:hover{
+	text-decoration: none;
+}
+.card-title {
+	text-align: center;
+	position: absolute;
+	right: 0px;
+	top: -5px;
+}
+.item-card-title {
+	font-size: 16px;
+	transition: 1s;
+	cursor: pointer;
+	min-height: 35px;
+	text-align: center;
+}
+.card:hover {
+	transform: scale(1.05);
+	box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+.card-text {
+	font-size: 0.875em;
+	min-height: 87px;
+}
+
+.card::before,
+.card::after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	transform: scale3d(0, 0, 1);
+	transition: transform 0.3s ease-out 0s;
+	background: rgba(255, 255, 255, 0.1);
+	content: "";
+	pointer-events: none;
+}
+.card::before {
+	transform-origin: left top;
+}
+.card::after {
+	transform-origin: right bottom;
+}
+.card:hover::before,
+.card:hover::after,
+.card:focus::before,
+.card:focus::after {
+	transform: scale3d(1, 1, 1);
+}
+/**Card Pro**/
+.item.pro{
+	margin: 0 auto;
+}
+.item.pro .item-card{
+	background-color: #071A52;
+	color: #F7F5F6;
+}
+.pro .card-text{
+	margin-bottom: 0;
+}
+.card-tasa{
+	font-size: 25px;
+	text-align: center;
+	color: #A8FF84;
+	font-weight: bold;
+	margin-bottom: 2em;
+}
+/**Card Broker**/
+.broker-card{
+	color: #071A52;
+	text-decoration: none;
+}
+.broker-card-item{
+	align-items:center;
+	justify-content: between;
+	padding: 15px;
+}
+.broker-card:hover{
+	color: #071A52;
+	text-decoration: none;
+}
+.btn-link-broker{
+	margin: 0 auto;
+	width: 8em;
+	color: #F7F5F6
+}
+/**Button**/
+.buton-see-more{
+	background: none;
+	border: 0;
+	color: #4380ff;
+	margin: 0 auto;
+}
+
+/**Select**/
+
+.select {
+	font-family:
+		'Roboto','Helvetica','Arial',sans-serif;
+	position: relative;
+	width: 350px;
+	margin-bottom: 2em;
+}
+
+.select-text {
+	position: relative;
+	font-family: inherit;
+	background-color: transparent;
+	width: 350px;
+	padding: 10px 10px 10px 10px;
+	font-size: 18px;
+	border-radius: 4px;
+	border: 2px solid rgba(0,0,0, 0.12);
+}
+
+/* Remove focus */
+.select-text:focus {
+	outline: none;
+	border: 2px solid #071A52;
+}
+
+/* Use custom arrow */
+.select .select-text {
+	appearance: none;
+	-webkit-appearance:none;
+	color: #071A52;
+}
+
+.select:after {
+	position: absolute;
+	top: 18px;
+	right: 10px;
+	/* Styling the down arrow */
+	width: 0;
+	height: 0;
+	padding: 0;
+	content: '';
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid rgba(0, 0, 0, 0.12);
+
+	pointer-events: none;
+}
+
+/* LABEL ======================================= */
+.select-label {
+	color: rgba(0,0,0, 0.26);
+	background: white;
+	font-size: 15px;
+	font-weight: normal;
+	position: absolute;
+	pointer-events: none;
+	padding: 0 5px;
+	left: 10px;
+	top: 12px;
+	transition: 0.2s ease all;
+}
+
+
+/* active state */
+.select-text:focus ~ .select-label, .select-text:valid ~ .select-label {
+	color: #071A52;
+	top: -8px;
+	transition: 0.2s ease all;
+	font-size: 0.875em;
+}
+
+.select-text:valid:not(focus) ~ .select-label {
+	color: #071A52;
+}
+.select-text:valid:focus ~ .select-label {
+	color: #16B978;
+}
+
+/**Planes**/
+.item-prices{
+	padding:0;
+}
+.item-prices .item-card{
+	margin-top: 1em;
+}
+.item-prices ul{
+	list-style: none;
+	text-align: center;
+	padding: 0;
+}
+.item-prices .btn-link{
+	margin-top: 1em;
+}
+
+@media(min-width: 768px){
+	.item-prices:not(:nth-child(2)){
+		margin-top: 10px;
+	}
+	.item-prices:nth-of-type(2) .item-card{
+		box-shadow: -3px 0 3px rgba(0, 0, 0, 0.15), 3px 0 3px rgba(0, 0, 0, 0.15);
+		z-index: 1;
+	}
+	.item-prices .item-card{
+		min-height: 23.5em;
+		margin-top: 0;
+	}
+
+}
+.badge-primary{
+  color: #fff;
+  background-color: #16B978;
+}
+.currency{
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  &:hover{
+      background-color: #4ac292;
+      color: #fff;
   }
-  .principal-subtitle{
-    text-align: center;
-    color: #808080;
-    padding-bottom: 30px;
-  }
-  img {
-    height: 62px;
-    width: 100px;
-    margin: 0 auto;
-  }
-  
-  .item {
-    padding-left: 5px;
-    padding-right: 5px;
-    margin-bottom: 30px;
-  }
-  .item-card {
-    transition: 0.5s;
-    cursor: pointer;
-    min-height: 300px;
-  }
-  .card-title {
-    text-align: center;
-    position: absolute;
-    right: 0px;
-    top: -5px;
-  }
-  .bank-image {
-    margin-top: 10px;
-  }
-  .item-card-title {
-    font-size: 15px;
-    transition: 1s;
-    cursor: pointer;
-    min-height: 35px;
-     text-align: center;
-  }
-  .item-card-title i {
-    font-size: 14px;
-    transition: 1s;
-    cursor: pointer;
-    color: #ffa710;
-    text-align: center;
-  }
-  .card-title i:hover {
-    transform: scale(1.25) rotate(100deg);
-    color: #18d4ca;
-  }
-  .card:hover {
-    transform: scale(1.05);
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
-  }
-  .card-text {
-    font-size: 14px;
-    padding-left: 10px;
-  }
-  
-  .card::before,
-  .card::after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    transform: scale3d(0, 0, 1);
-    transition: transform 0.3s ease-out 0s;
-    background: rgba(255, 255, 255, 0.1);
-    content: "";
-    pointer-events: none;
-  }
-  .card::before {
-    transform-origin: left top;
-  }
-  .card::after {
-    transform-origin: right bottom;
-  }
-  .card:hover::before,
-  .card:hover::after,
-  .card:focus::before,
-  .card:focus::after {
-    transform: scale3d(1, 1, 1);
-  }
-  
+}
+.accounts__investsments-summary .accounts__investsments-summary{
+  background-color: white;
+    min-height: 708px;
+    max-height: 708px;
+    overflow-y: auto;
+}
+.nav-tabs{
+    border-bottom: 2px solid #A7FF84;
+    .nav-item{
+    padding: 1em 3em;
+    }
+}
+.nav-tabs .nav-link.active,
+ .nav-tabs .nav-item.show .nav-link{
+  color: #071A52;
+      background-color: transparent;
+      border-bottom: 1px solid #fff;;
+}
+.currency-table{
+
+
+}

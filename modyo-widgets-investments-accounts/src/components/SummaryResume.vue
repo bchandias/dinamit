@@ -1,12 +1,12 @@
 <template>
   <div class="accounts__summary-sidebar">
     <div class="p-lg-4 px-4 pb-4 d-flex">
-      <h1 class="h5 mb-0 text-primary d-flex justify-content-between">
+      <h1 class="h5 mb-0 text-primary d-flex align-items-center justify-content-start">
         <img
-          src="../assets/logo.png"
-          style="width: 10%; heigth: 10%;"
+          src="../assets/user.png"
+          class="user-logo mr-4"
           alt="user-logo">
-        <strong>Nombre usuario</strong>
+        <strong>Isabela Zoey</strong>
       </h1>
     </div>
     <!-- <div class="p-lg-4 px-4 pb-4">
@@ -140,17 +140,17 @@
           </a>
         </div>
       </div> -->
-      <p class="list-group-item list-group-item-primary">
+      <p class="currency list-group-item list-group-item-primary">
         Planes
       </p>
-      <p class="list-group-item list-group-item-primary">
-        Rate the APP
+      <p class="currency list-group-item list-group-item-primary">
+        Contactanos
       </p>
-      <p class="list-group-item list-group-item-primary">
-        Account Settings
+      <p class="currency list-group-item list-group-item-primary">
+        Configuración
       </p>
-      <p class="list-group-item list-group-item-primary">
-        Sing Out
+      <p class="currency list-group-item list-group-item-primary">
+        Cerrar Sesión
       </p>
     </div>
   </div>
@@ -213,5 +213,14 @@ export default {
   .accounts__summary-sidebar {
     border-right: 1px solid $primary-10;
   }
+  .accounts__container{
+    border-radius: 1em;
+  }
+  .accounts__investsments-summary{
+    border-radius: 1em;
+  }
+.user-logo{
+  max-width: 3em;
+}
 }
 </style>

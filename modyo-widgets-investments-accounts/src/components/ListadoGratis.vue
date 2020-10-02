@@ -6,7 +6,7 @@
     <p class="principal-subtitle">
       Éstas son nuestras recomendaciones para ti
     </p>
-    <div class="row">
+    <div class="row justify-content-center">
       <div class="col-12">
         <div
           id="productFilter"
@@ -33,7 +33,7 @@
       </div>
       <div
         data-producttype="ahorro"
-        class="col-12 col-sm-6 col-md-6 col-lg-3 item">
+        class="col-12 col-sm-6 col-md-6 col-lg-4 item">
         <div class="card item-card card-block">
           <img
             class="bank-image"
@@ -55,7 +55,7 @@
         </div>
       </div>
       <div
-        class="col-12 col-sm-6 col-md-6 col-lg-3 item"
+        class="col-12 col-sm-6 col-md-6 col-lg-4 item"
         data-producttype="fondo">
         <div class="card item-card card-block">
           <img
@@ -78,7 +78,7 @@
         </div>
       </div>
       <div
-        class="col-12 col-sm-6 col-md-6 col-lg-3 item"
+        class="col-12 col-sm-6 col-md-6 col-lg-4 item"
         data-producttype="ahorro">
         <div class="card item-card card-block">
           <img
@@ -101,7 +101,7 @@
         </div>
       </div>
       <div
-        class="col-12 col-sm-6 col-md-6 col-lg-3 item"
+        class="col-12 col-sm-6 col-md-6 col-lg-4 item"
         data-producttype="ahorro">
         <div class="card item-card card-block">
           <img
@@ -123,61 +123,61 @@
           </button>
         </div>
       </div>
-      <button
-        id="more"
-        onclick="seeMore()"
-        class="buton-see-more">
-        Ver más
-      </button>
-      <!--More options -->
+    </div>
+    <button
+      id="more"
+      onclick="seeMore()"
+      class="col-12 mb-4 buton-see-more">
+      Ver más
+    </button>
+    <!--More options -->
+    <div
+      id="hiddenCards"
+      class="d-none row justify-content w-100">
       <div
-        id="hiddenCards"
-        class="d-none row w-100">
-        <div
-          class="col-12 col-sm-6 col-md-6 col-lg-3 item"
-          data-producttype="deposito">
-          <div class="card item-card card-block">
-            <img
-              class="bank-image"
-              src="https://d7nxjt1whovz0.cloudfront.net/marketplace/logos/divisions/banco-de-chile.png"
-              alt="Photo of sunset">
-            <h5 class="item-card-title mt-3 mb-3">
-              Ahorro Reajustable Giro Diferido
-            </h5>
-            <ul class="card-text">
-              <li>Modo de cuenta: Electrónica</li>
-              <li>Giros máximos: 6</li>
-              <li>Tipo de cuenta: Giro Diferido</li>
-            </ul>
-            <button
-              type="button"
-              class="btn btn-primary rounded bg-green">
-              Solicitar
-            </button>
-          </div>
+        class="col-12 col-sm-6 col-md-6 col-lg-4 item"
+        data-producttype="deposito">
+        <div class="card item-card card-block">
+          <img
+            class="bank-image"
+            src="https://d7nxjt1whovz0.cloudfront.net/marketplace/logos/divisions/banco-de-chile.png"
+            alt="Photo of sunset">
+          <h5 class="item-card-title mt-3 mb-3">
+            Ahorro Reajustable Giro Diferido
+          </h5>
+          <ul class="card-text">
+            <li>Modo de cuenta: Electrónica</li>
+            <li>Giros máximos: 6</li>
+            <li>Tipo de cuenta: Giro Diferido</li>
+          </ul>
+          <button
+            type="button"
+            class="btn btn-primary rounded bg-green">
+            Solicitar
+          </button>
         </div>
-        <div
-          class="col-12 col-sm-6 col-md-6 col-lg-3 item"
-          data-producttype="fondo">
-          <div class="card item-card card-block">
-            <img
-              class="bank-image"
-              src="https://d7nxjt1whovz0.cloudfront.net/marketplace/logos/divisions/banco-de-chile.png"
-              alt="Photo of sunset">
-            <h5 class="item-card-title mt-3 mb-3">
-              Ahorro Reajustable Giro Diferido
-            </h5>
-            <ul class="card-text">
-              <li>Modo de cuenta: Electrónica</li>
-              <li>Giros máximos: 6</li>
-              <li>Tipo de cuenta: Giro Diferido</li>
-            </ul>
-            <button
-              type="button"
-              class="btn btn-primary rounded bg-green">
-              Solicitar
-            </button>
-          </div>
+      </div>
+      <div
+        class="col-12 col-sm-6 col-md-6 col-lg-4 item"
+        data-producttype="fondo">
+        <div class="card item-card card-block">
+          <img
+            class="bank-image"
+            src="https://d7nxjt1whovz0.cloudfront.net/marketplace/logos/divisions/banco-de-chile.png"
+            alt="Photo of sunset">
+          <h5 class="item-card-title mt-3 mb-3">
+            Ahorro Reajustable Giro Diferido
+          </h5>
+          <ul class="card-text">
+            <li>Modo de cuenta: Electrónica</li>
+            <li>Giros máximos: 6</li>
+            <li>Tipo de cuenta: Giro Diferido</li>
+          </ul>
+          <button
+            type="button"
+            class="btn btn-primary rounded bg-green">
+            Solicitar
+          </button>
         </div>
       </div>
     </div>

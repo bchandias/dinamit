@@ -101,7 +101,7 @@
                     href="#nav-home"
                     role="tab"
                     aria-controls="nav-home"
-                    aria-selected="true">Home</a>
+                    aria-selected="true">Comparador</a>
                   <a
                     id="nav-profile-tab"
                     class="nav-item nav-link"
@@ -109,7 +109,7 @@
                     href="#nav-profile"
                     role="tab"
                     aria-controls="nav-profile"
-                    aria-selected="false">Profile</a>
+                    aria-selected="false">Inversión</a>
                   <a
                     id="nav-contact-tab"
                     class="nav-item nav-link"
@@ -117,7 +117,15 @@
                     href="#nav-contact"
                     role="tab"
                     aria-controls="nav-contact"
-                    aria-selected="false">Contact</a>
+                    aria-selected="false">Brokers</a>
+                  <a
+                    id="nav-broker-tab"
+                    class="nav-item nav-link"
+                    data-toggle="tab"
+                    href="#nav-broker"
+                    role="tab"
+                    aria-controls="nav-broker"
+                    aria-selected="false">Brokers</a>
                 </div>
               </nav>
               <div
@@ -143,6 +151,13 @@
                   role="tabpanel"
                   aria-labelledby="nav-contact-tab">
                   <listado-pro />
+                </div>
+                <div
+                  id="nav-broker"
+                  class="tab-pane fade"
+                  role="tabpanel"
+                  aria-labelledby="nav-contact-tab">
+                  <listado-brokers />
                 </div>
               </div>
             </div>
@@ -196,6 +211,7 @@ import InvestmentModal from './components/InvestmentModal.vue';
 import Formulario from './components/Formulario.vue';
 import ListadoGratis from './components/ListadoGratis.vue';
 import ListadoPro from './components/ListadoPro.vue';
+import ListadoBrokers from './components/ListadoBrokers.vue';
 
 export default {
   name: 'Accounts',
@@ -210,6 +226,7 @@ export default {
     formulario: Formulario,
     'listado-gratis': ListadoGratis,
     'listado-pro': ListadoPro,
+    'listado-brokers': ListadoBrokers,
     Multiselect,
   },
   data() {
