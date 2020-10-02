@@ -1,5 +1,6 @@
 <template>
   <div class="accounts-app py-lg-5">
+    <div class="d-none" />
     <div
       v-if="isLoading"
       class="loading">
