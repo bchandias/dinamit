@@ -42,7 +42,13 @@ jobs:
         MODYO_TOKEN: ${{secrets.TOKEN}}
         MODYO_SITE_ID: ${{secrets.SITE_ID}}
         MODYO_WIDGET_NAME: ${{secrets.WIDGET_NAME}}
-      run: | 
+      run: |  
+        echo "GITHUB_TOKEN: $GITHUB_TOKEN"
+        echo "MODYO_ACCOUNT_URL: $MODYO_ACCOUNT_URL"
+        echo "MODYO_VERSION: $MODYO_VERSION"
+        echo "MODYO_TOKEN: $MODYO_TOKEN"
+        echo "MODYO_SITE_ID: $MODYO_SITE_ID"
+        echo "MODYO_WIDGET_NAME: $MODYO_WIDGET_NAME"
         cd modyo-widgets-investments-accounts 
         yarn modyo-push "$MODYO_WIDGET_NAME"
     - name: Push to Spanish Modyo Site
