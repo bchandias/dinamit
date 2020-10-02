@@ -1,10 +1,10 @@
 <template>
   <div class="container mt-2">
     <h1 class="principal-title">
-      ¿Dónde invertir?
+      {{ info.data.entries[1].fields.title }}
     </h1>
     <p class="principal-subtitle">
-      Éstas son nuestras recomendaciones para ti
+      {{ info.data.entries[1].fields.excerpt }}
     </p>
     <div class="row justify-content-center">
       <div class="col-12">
@@ -185,9 +185,21 @@
 </template>
 <script>
 // import $ from 'jquery';
+import axios from 'axios';
 
 export default {
   name: 'ListadoGratis',
+  data() {
+    return {
+      info: '',
+    };
+  },
+  mounted() {
+    axios
+      .get('https://vass.modyo.cloud/api/content/spaces/personas/types/posts/entries')
+      // eslint-disable-next-line no-return-assign
+      .then((response) => (this.info = response));
+  },
 };
 
 </script>
