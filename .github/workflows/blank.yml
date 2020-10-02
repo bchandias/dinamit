@@ -15,8 +15,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
         registry-url: https://npm.pkg.github.com/
         scope: '@modyo'
-    - name: Open folder
-      run: cd modyo-widgets-investments-accounts
     - name: Install dependencies with yarn
       # if your project use more than one private registry you cad add it like this:
       # run: |
@@ -24,16 +22,22 @@ jobs:
       #   echo "//npm.fontawesome.com/:_authToken=$FORTAWESOME_TOKEN" >> .npmrc
       #   yarn
       # if not do this:
-      run: yarn
+      run: |
+        cd modyo-widgets-investments-accounts
+        yarn
       env:
         # And add the additional registry token here:
         # FORTAWESOME_TOKEN: ${{secrets.FORTAWESOME_TOKEN}}
         NODE_AUTH_TOKEN: ${{ secrets.TOKEN_REG }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This gets generated automatically
     - name: Build Package
-      run: yarn build
+      run: | 
+        cd modyo-widgets-investments-accounts
+        yarn build
     - name: Push to Modyo Site
-      run: yarn modyo-push "$MODYO_WIDGET_NAME"
+      run: | 
+        cd modyo-widgets-investments-accounts 
+        yarn modyo-push "$MODYO_WIDGET_NAME"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This gets generated automatically
         MODYO_ACCOUNT_URL: ${{secrets.BASE_URL}}
@@ -42,7 +46,9 @@ jobs:
         MODYO_SITE_ID: ${{secrets.SITE_ID}}
         MODYO_WIDGET_NAME: ${{secrets.WIDGET_NAME}}
     - name: Push to Spanish Modyo Site
-      run: yarn modyo-push "$MODYO_WIDGET_NAME"
+      run: | 
+        cd modyo-widgets-investments-accounts 
+        yarn modyo-push "$MODYO_WIDGET_NAME"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This gets generated automatically
         MODYO_ACCOUNT_URL: ${{secrets.BASE_URL}}
