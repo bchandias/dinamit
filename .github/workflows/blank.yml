@@ -51,9 +51,3 @@ jobs:
         echo "MODYO_WIDGET_NAME: $MODYO_WIDGET_NAME"
         cd modyo-widgets-investments-accounts 
         yarn modyo-push "$MODYO_WIDGET_NAME"
-    - name: Release Draft
-      uses: release-drafter/release-drafter@v5
-      with:
-        config-name: release-drafter.yml
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
